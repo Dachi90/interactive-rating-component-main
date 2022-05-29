@@ -1,0 +1,16 @@
+body {
+  min-height: 100vh;
+}
+
+/* Footer */
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
