@@ -13,6 +13,12 @@ body {
   --Circles: hsl(213, 19%, 22%);
 }
 
+/* Utilities */
+
+.display-none {
+  display: none;
+}
+
 /* Main */
 
 .wrapper__fullScreen {
