@@ -20,7 +20,7 @@ body {
 }
 
 .display-none {
-  display: none;
+  backface-visibility: hidden;
 }
 
 .cardShape {
@@ -32,6 +32,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  transition: transform 0.5s;
+}
+
+.cardShape-rotate {
+  position: absolute;
+  transform: rotateY(180deg);
 }
 
 .wrapper__fullScreen {
@@ -40,6 +46,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 /* Rating Card */

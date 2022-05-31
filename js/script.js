@@ -11,10 +11,12 @@ window.addEventListener("click", (e) => {
 
   if (e.target === $ButtonSubmit) {
     $WrapperRatting.classList.remove("cardShape");
+    $WrapperRatting.classList.add("cardShape-rotate");
     $WrapperRatting.classList.add("display-none");
     $WrapperThanks.classList.remove("display-none");
     $WrapperThanks.classList.add("cardShape");
     $WrapperThanks.classList.add("align-center");
+    $WrapperThanks.classList.remove("cardShape-rotate");
     $ThanksStateP.innerHTML += `You selected ${rating} out of 5`;
   }
 });
