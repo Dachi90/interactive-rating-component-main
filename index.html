@@ -18,7 +18,7 @@
   </head>
   <body>
     <div class="wrapper__fullScreen">
-      <div class="ratingState">
+      <div class="cardShape" id="ratingCard">
         <img src="./images/icon-star.svg" alt="logo" class="logo" />
         <h1 class="title">How did we do?</h1>
         <p class="paragraph">Please let us know how we did with your </br> support request. All feedback is appreciated </br> to help us improve our offering!</p>
@@ -33,13 +33,15 @@
 
         <button class="buttonSubmit">SUBMIT</button>
       </div>
-      <div class="thanksState display-none">
-        <img src="/images/illustration-thank-you.svg" alt="thank you">
-        <p class="thanksState__p"></p>
-        <p>Thank you!</p>
-        <p>We appreciated you taking the time to give a <br>
-          ratting. If you ever need more support, don´t <br>
-          hesitate to get in touch!</p>
+      <div class="display-none" id="thankyouCard">
+        <img src="/images/illustration-thank-you.svg" alt="thank you" class="thanksImg">
+        <p class="thanksCard__rating"></p>
+        <h2 class="thanksCard__h2">Thank you!</h2>
+        <div class="thnksCard__div-p">
+          <p class="thanksCard__p">We appreciated you taking the time to give a <br>
+            ratting. If you ever need more support, don't <br>
+            hesitate to get in touch!</p>
+        </div>
       </div>
     </div>
     <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Martín</a>.</div>

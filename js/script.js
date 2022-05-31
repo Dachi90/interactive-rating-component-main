@@ -1,23 +1,31 @@
 const $Numbers = document.querySelectorAll(".ratingWrapper__number"),
   $ButtonSubmit = document.querySelector(".buttonSubmit"),
-  $WrapperRatting = document.querySelector(".ratingState"),
-  $WrapperThanks = document.querySelector(".thanksState"),
-  $ThanksStateP = document.querySelector(".thanksState__p");
+  $WrapperRatting = document.querySelector("#ratingCard"),
+  $WrapperThanks = document.querySelector("#thankyouCard"),
+  $ThanksStateP = document.querySelector(".thanksCard__rating");
 
-let ratting = 0;
+let rating = 0;
 
 window.addEventListener("click", (e) => {
+  selectRating(e);
+
+  if (e.target === $ButtonSubmit) {
+    $WrapperRatting.classList.remove("cardShape");
+    $WrapperRatting.classList.add("display-none");
+    $WrapperThanks.classList.remove("display-none");
+    $WrapperThanks.classList.add("cardShape");
+    $WrapperThanks.classList.add("align-center");
+    $ThanksStateP.innerHTML += `You selected ${rating} out of 5`;
+  }
+});
+
+const selectRating = (e) => {
   $Numbers.forEach((el) => {
     el.classList.remove("ratingWrapper__number-selected");
     if (e.target === el) {
       el.classList.add("ratingWrapper__number-selected");
-      ratting = el.textContent;
+      rating = el.textContent;
+      console.log(rating);
     }
   });
-
-  if (e.target === $ButtonSubmit) {
-    $WrapperRatting.classList.add("display-none");
-    $WrapperThanks.classList.remove("display-none");
-    $ThanksStateP.innerHTML += `You selected ${ratting} out of 5`;
-  }
-});
+};
