@@ -47,6 +47,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  caret-color: transparent;
 }
 
 /* Rating Card */
